@@ -1,23 +1,13 @@
+
 public class CheckLab {
     public static void main(String[] args) throws InterruptedException {
         Barrier b = new Barrier(5);
 
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 20; i++) {
             new Thread(new FirstThread(b)).start();
-
             Thread.sleep(500);
         }
-
     }
-
-
-        public static class ThreadTest implements Runnable{
-            @Override
-            public void run(){
-                System.out.println("Thread " + Thread.currentThread().getName());
-            }
-        }
-
 
         public static class FirstThread implements Runnable{
         private final Barrier b;
