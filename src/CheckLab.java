@@ -22,6 +22,7 @@ public class CheckLab {
                     System.out.println("Thread " + Thread.currentThread().getName() + " has arrived");
 
                     b.await();
+                    Thread.sleep(500);
 
                     System.out.println("Thread " + Thread.currentThread().getName() + " has released");
 
