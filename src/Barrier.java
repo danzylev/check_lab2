@@ -12,11 +12,7 @@ public class Barrier {
             if (!Thread.interrupted()) {
                 if (num > 1) {
                     num--;
-                    try {
-                        this.wait();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    this.wait();
                 } else {
                     this.notifyAll();
                     num = firstNum;
